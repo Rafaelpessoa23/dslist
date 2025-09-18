@@ -2,8 +2,6 @@ package br.com.rafapessoa.dslist.entities;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -13,14 +11,14 @@ public class GameList {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String nome;
+    private String name;
 
     public GameList(){
     }
 
     public GameList(long id, String nome){
         this.id = id;
-        this.nome = nome;
+        this.name = nome;
     }
 
     public long getId() {
@@ -32,11 +30,11 @@ public class GameList {
     }
 
     public String getNome() {
-        return nome;
+        return name;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        this.name = nome;
     }
 
     @Override
